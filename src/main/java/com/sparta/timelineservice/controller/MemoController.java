@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -30,7 +31,9 @@ public class MemoController {
 
     @GetMapping("/api/memos")
     public List<Memo> getMemos() {
-        return memoRepository.findAllByOrderByModifiedAtDesc();
+        LocalDateTime yesterday = LocalDateTime.now().minusDays(1);
+        LocalDateTime now = LocalDateTime.now();
+        return memoRepository.findAllByModifiedAtBetweenOrderByModifiedAtDesc(yesterday, now);
     }
 
     @DeleteMapping("/api/memos/{id}")
