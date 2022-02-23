@@ -1,6 +1,6 @@
 package com.sparta.timelineservice.repository;
 
-import com.sparta.timelineservice.domain.Memo;
+import com.sparta.timelineservice.entity.Memo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDateTime;

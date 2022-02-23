@@ -1,6 +1,6 @@
 package com.sparta.timelineservice.controller;
 
-import com.sparta.timelineservice.domain.Memo;
+import com.sparta.timelineservice.entity.Memo;
 import com.sparta.timelineservice.dto.MemoRequestDto;
 import com.sparta.timelineservice.repository.MemoRepository;
 import com.sparta.timelineservice.service.MemoService;

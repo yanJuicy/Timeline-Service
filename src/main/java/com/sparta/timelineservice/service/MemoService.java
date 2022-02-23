@@ -1,6 +1,6 @@
 package com.sparta.timelineservice.service;
 
-import com.sparta.timelineservice.domain.Memo;
+import com.sparta.timelineservice.entity.Memo;
 import com.sparta.timelineservice.dto.MemoRequestDto;
 import com.sparta.timelineservice.repository.MemoRepository;
 import lombok.RequiredArgsConstructor;
